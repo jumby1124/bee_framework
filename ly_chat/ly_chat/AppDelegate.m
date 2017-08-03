@@ -33,25 +33,20 @@
 #import "AppBoard_iPhone.h"
 #import "AppBoard_iPad.h"
 
+#import "GuidePageBoard_iPhone.h"
+
 #pragma mark -
 
 @implementation AppDelegate
 
 - (void)load
 {
-  bee.ui.config.ASR = YES;
-  bee.ui.config.iOS6Mode = YES;
+    bee.ui.config.ASR = YES;
+    bee.ui.config.iOS6Mode = YES;
   
-	if ( [BeeSystemInfo isDevicePad] )
-	{
-		//self.window.rootViewController = [AppBoard_iPad sharedInstance];
-        self.window.rootViewController = [BeeUIStack stackWithFirstBoard:[AppBoard_iPhone sharedInstance]] ;
-	}
-	else
-	{
-		//self.window.rootViewController = [AppBoard_iPhone sharedInstance];
-        self.window.rootViewController = [BeeUIStack stackWithFirstBoard:[AppBoard_iPhone sharedInstance]] ;
-	}
+    //设置第一次启动的启动页面
+    GuidePageBoard_iPhone *board = [GuidePageBoard_iPhone board];
+    self.window.rootViewController = board;
 }
 
 - (void)unload

@@ -16,8 +16,11 @@
 //
 
 #import "AppBoard_iPhone.h"
+#import "Signin_Board_iPhone.h"
 
 #pragma mark -
+
+DEF_UI( AppBoard_iPhone, appBoard )
 
 @implementation AppBoard_iPhone
 
@@ -34,12 +37,7 @@ DEF_SINGLETON( AppBoard_iPhone )
 
 - (void)deselectAll
 {
-    [self.home_button setSelected:NO];
-}
-- (void)selectHome
-{
-    [self deselectAll];
-    [self.home_button setSelected:YES];
+    
 }
 
 #pragma mark Signal
@@ -83,6 +81,25 @@ ON_SIGNAL3( BeeUINavigationBar, LEFT_TOUCHED, signal )
 
 ON_SIGNAL3( BeeUINavigationBar, RIGHT_TOUCHED, signal )
 {
+}
+
+ON_SIGNAL3( AppBoard_iPhone, testBtn, signal )
+{
+    [self presentModalStack:[BeeUIStack stackWithFirstBoard:[Signin_Board_iPhone board]] animated:YES] ;
+}
+
+- (void)hideLogin
+{
+    [self hideModalStack];
+}
+- (void)hideModalStack
+{
+    if ( nil == self.modalStack )
+    {
+        return;
+    }
+    
+    [self dismissModalStackAnimated:YES];
 }
 
 @end

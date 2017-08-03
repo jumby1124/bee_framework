@@ -10,9 +10,10 @@
 
 #import "AppBoard_iPhone.h"
 
+#define ALL_GUIDE_PAGE 6
+
 
 @interface GuidePageBoard_iPhone ()<UIScrollViewDelegate>
-
 {
     UIScrollView *scrollview;
     UIPageControl *page;
@@ -44,10 +45,10 @@ ON_CREATE_VIEWS( signal )
     scrollview = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     scrollview.pagingEnabled = YES;
     scrollview.delegate = self;
-    scrollview.contentSize = CGSizeMake(5*SCREEN_WIDTH, SCREEN_HEIGHT);
+    scrollview.contentSize = CGSizeMake(ALL_GUIDE_PAGE * SCREEN_WIDTH, SCREEN_HEIGHT);
     scrollview.showsHorizontalScrollIndicator = NO;
     
-    for (int i=0; i<5; i++) {
+    for (int i=0; i < ALL_GUIDE_PAGE; i++) {
         NSString *imgName = [NSString stringWithFormat:@"guideImage%d.png",i+1];
         UIImageView *imgView = [[UIImageView alloc]initWithFrame:CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
         imgView.image = [UIImage imageNamed:imgName];
@@ -59,7 +60,7 @@ ON_CREATE_VIEWS( signal )
     page.currentPageIndicatorTintColor = ezHouseColor;
     page.pageIndicatorTintColor = [UIColor grayColor];
     page.frame = CGRectMake(0, SCREEN_HEIGHT - 28, 40, 30);
-    page.numberOfPages = 5;
+    page.numberOfPages = ALL_GUIDE_PAGE ;
     [self.view insertSubview:page aboveSubview:scrollview];
 }
 
@@ -77,7 +78,7 @@ ON_CREATE_VIEWS( signal )
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    if (scrollView.contentOffset.x - SCREEN_WIDTH*4 == 0 ) {
+    if (scrollView.contentOffset.x - SCREEN_WIDTH * (ALL_GUIDE_PAGE - 1) == 0 ) {
         
         [UIApplication sharedApplication].keyWindow.rootViewController = [AppBoard_iPhone sharedInstance];
         [AppBoard_iPhone sharedInstance].allowedLandscape = NO;

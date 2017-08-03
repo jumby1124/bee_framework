@@ -370,6 +370,9 @@
 		BA0685151F30302600821AAD /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = BA0683C21F30302500821AAD /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BA06851A1F30537100821AAD /* footer_home_active_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0685181F30537100821AAD /* footer_home_active_icon@2x.png */; };
 		BA06851B1F30537100821AAD /* footer_home_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA0685191F30537100821AAD /* footer_home_icon@2x.png */; };
+		BA3EEEC71F330A9D001975A7 /* Signin_Board_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3EEEC51F330A9D001975A7 /* Signin_Board_iPhone.m */; };
+		BA3EEEC81F330A9D001975A7 /* Signin_Board_iPhone.xml in Resources */ = {isa = PBXBuildFile; fileRef = BA3EEEC61F330A9D001975A7 /* Signin_Board_iPhone.xml */; };
+		BA3EEECA1F3311E8001975A7 /* default.lang in Resources */ = {isa = PBXBuildFile; fileRef = BA3EEEC91F3311E8001975A7 /* default.lang */; };
 		BA4945C21F3063B600E9A8D0 /* AppBoard_iPhone.xml in Resources */ = {isa = PBXBuildFile; fileRef = BA0685161F30368700821AAD /* AppBoard_iPhone.xml */; };
 		BAD90C0A1F31D1F400C346E1 /* BaseBoard_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD90C081F31CC0300C346E1 /* BaseBoard_iPhone.m */; };
 		BAD90C0B1F31D1F700C346E1 /* GuidePageBoard_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3688611F31A682001C74A8 /* GuidePageBoard_iPhone.m */; };
@@ -1096,6 +1099,10 @@
 		BA0685191F30537100821AAD /* footer_home_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "footer_home_icon@2x.png"; sourceTree = "<group>"; };
 		BA3688601F31A682001C74A8 /* GuidePageBoard_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageBoard_iPhone.h; sourceTree = "<group>"; };
 		BA3688611F31A682001C74A8 /* GuidePageBoard_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageBoard_iPhone.m; sourceTree = "<group>"; };
+		BA3EEEC41F330A9D001975A7 /* Signin_Board_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Signin_Board_iPhone.h; path = view_iPhone/Signin_Board_iPhone.h; sourceTree = "<group>"; };
+		BA3EEEC51F330A9D001975A7 /* Signin_Board_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Signin_Board_iPhone.m; path = view_iPhone/Signin_Board_iPhone.m; sourceTree = "<group>"; };
+		BA3EEEC61F330A9D001975A7 /* Signin_Board_iPhone.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Signin_Board_iPhone.xml; path = view_iPhone/Signin_Board_iPhone.xml; sourceTree = "<group>"; };
+		BA3EEEC91F3311E8001975A7 /* default.lang */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = default.lang; sourceTree = "<group>"; };
 		BAD90C071F31CC0300C346E1 /* BaseBoard_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseBoard_iPhone.h; path = view_iPhone/resource/BaseBoard_iPhone.h; sourceTree = "<group>"; };
 		BAD90C081F31CC0300C346E1 /* BaseBoard_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseBoard_iPhone.m; path = view_iPhone/resource/BaseBoard_iPhone.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1224,6 +1231,7 @@
 			isa = PBXGroup;
 			children = (
 				BA06851C1F3053D600821AAD /* images */,
+				BA3EEEC91F3311E8001975A7 /* default.lang */,
 			);
 			name = resource;
 			path = view_iPhone/resource;
@@ -2574,6 +2582,9 @@
 			children = (
 				BAD90C071F31CC0300C346E1 /* BaseBoard_iPhone.h */,
 				BAD90C081F31CC0300C346E1 /* BaseBoard_iPhone.m */,
+				BA3EEEC41F330A9D001975A7 /* Signin_Board_iPhone.h */,
+				BA3EEEC51F330A9D001975A7 /* Signin_Board_iPhone.m */,
+				BA3EEEC61F330A9D001975A7 /* Signin_Board_iPhone.xml */,
 			);
 			name = source;
 			sourceTree = "<group>";
@@ -2609,7 +2620,7 @@
 				TargetAttributes = {
 					BA0680811F302C3E00821AAD = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = P789F4C7PY;
+						DevelopmentTeam = ZW75636R76;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2641,6 +2652,8 @@
 				BA06851B1F30537100821AAD /* footer_home_icon@2x.png in Resources */,
 				BA06851A1F30537100821AAD /* footer_home_active_icon@2x.png in Resources */,
 				BA4945C21F3063B600E9A8D0 /* AppBoard_iPhone.xml in Resources */,
+				BA3EEECA1F3311E8001975A7 /* default.lang in Resources */,
+				BA3EEEC81F330A9D001975A7 /* Signin_Board_iPhone.xml in Resources */,
 				BA0680C01F302C3E00821AAD /* LaunchScreen.xib in Resources */,
 				BA0680BD1F302C3E00821AAD /* Images.xcassets in Resources */,
 			);
@@ -2942,6 +2955,7 @@
 				BA0684171F30302500821AAD /* Bee_UICapability.m in Sources */,
 				BA06844E1F30302500821AAD /* Bee_UIPullLoader.m in Sources */,
 				BA0683D11F30302500821AAD /* BeeMessage+BeeXML.mm in Sources */,
+				BA3EEEC71F330A9D001975A7 /* Signin_Board_iPhone.m in Sources */,
 				BA06847D1F30302500821AAD /* BeeUIQuery+Traversing.m in Sources */,
 				BA0685091F30302600821AAD /* CXMLElement.m in Sources */,
 				BA0683FC1F30302500821AAD /* UIPageControl+BeeUIStyle.m in Sources */,
@@ -3112,7 +3126,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
-				DEVELOPMENT_TEAM = P789F4C7PY;
+				DEVELOPMENT_TEAM = ZW75636R76;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ly_chat/ly_chat.pch;
@@ -3130,7 +3144,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = NO;
-				DEVELOPMENT_TEAM = P789F4C7PY;
+				DEVELOPMENT_TEAM = ZW75636R76;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ly_chat/ly_chat.pch;
