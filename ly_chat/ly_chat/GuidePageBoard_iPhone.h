@@ -10,5 +10,7 @@
 
 //引导页面
 @interface GuidePageBoard_iPhone : BaseBoard_iPhone
+{
+}
 
 @end

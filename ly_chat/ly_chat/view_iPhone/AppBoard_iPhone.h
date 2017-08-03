@@ -17,12 +17,19 @@
 
 #import "Bee.h"
 
+#pragma mark -
+
+AS_UI( AppBoard_iPhone, appBoard )
+
+#pragma mark -
+
+
 @interface AppBoard_iPhone : BeeUIBoard
 
 AS_SINGLETON( AppBoard_iPhone )
 
-AS_OUTLET(BeeUIButton, home_button)
 
-- (void)selectHome;
+- (void)showLogin;
+- (void)hideLogin;
 
 @end
